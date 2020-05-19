@@ -25,7 +25,12 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.less"
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "parking"
+    }
+  },
+  "defaultProject": "parking",
+  "cli": {
+    "analytics": "fd2b1cf3-b1c1-4ae0-80e5-ef4e3df9550a"
+  }
 }

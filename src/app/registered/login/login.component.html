@@ -1,0 +1,31 @@
+<div class="login">
+    <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+      <span>登录</span>
+        
+        <nz-form-item class="userName">
+          <nz-form-control [nzErrorTip]="Tip">
+            <nz-input-group nzPrefixIcon="mobile" style="font-size: 25px; width: 300px;">
+              <input type="text" nz-input formControlName="userName" maxlength="11" placeholder="手机号" [(ngModel)]="phone" (keyup)='Tips()'/>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        
+        <nz-form-item class="password">
+          <nz-form-control [nzErrorTip]="pasd">
+            <nz-input-group nzPrefixIcon="lock" style="font-size: 25px; width: 300px;">
+              <input type="password" nz-input formControlName="password" placeholder="密码" (keyup)='Psws()'/>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+       
+        <nz-form-item class="footer"> 
+          <nz-form-control>
+            <a class="registet" [routerLink]="[ '/register']"><p style="display: inline-block">注册账号</p></a>
+            <a class="login-form-forgot" class="login-form-forgot" [routerLink]="[ '/recover']">忘记密码?</a>
+          </nz-form-control>
+        </nz-form-item>
+        <button nz-button class="login-form-button" [nzType]="'primary'">登录</button>
+      </form>
+      
+    </div>
+    
